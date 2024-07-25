@@ -90,12 +90,19 @@ let perguntaAtual;
 function mostraPerguntas(){
   perguntaAtual = pergunta [atual];
   caixaPerguntas.textContent = perguntaAtual.enunciado;
-  moatraAlternativas(){
+  mostraAlternativas(){
 }
 mostraPerguntas();{
-  or(const alternativa of perguntaAtual.alternativas){
+  for(const alternativa of perguntaAtual.alternativas){
   cont botaoAlternativas = document.createElement("button");
     botaoAlternativas.textContent = alternativa.texto;
+    botaoAlternativas.addEvenListner("click",
+                                     function()
+                                     {
+                                       atual++;
+                                       mostraPerguntas();
+                                     }
+                                     );
     caixaAlternativas.appendChild(botaoAlternativas);
   }
 }
