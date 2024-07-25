@@ -90,11 +90,11 @@ let perguntaAtual;
 function mostraPerguntas(){
   perguntaAtual = pergunta [atual];
   caixaPerguntas.textContent = perguntaAtual.enunciado;
-  mostraAlternativas(){
+  mostraAlternativas();
 }
 mostraPerguntas();{
   for(const alternativa of perguntaAtual.alternativas){
-  cont botaoAlternativas = document.createElement("button");
+  const botaoAlternativas = document.createElement("button");
     botaoAlternativas.textContent = alternativa.texto;
     botaoAlternativas.addEvenListner("click",
                                      function()
