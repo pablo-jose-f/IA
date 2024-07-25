@@ -88,11 +88,11 @@ let atual = 0;
 let perguntaAtual;
 
 function mostraPerguntas(){
-  perguntaAtual = pergunta [atual];
+  perguntaAtual = perguntas[atual];
   caixaPerguntas.textContent = perguntaAtual.enunciado;
   mostraAlternativas();
 }
-mostraPerguntas();{
+function mostraPerguntas(){
   for(const alternativa of perguntaAtual.alternativas){
   const botaoAlternativas = document.createElement("button");
     botaoAlternativas.textContent = alternativa.texto;
